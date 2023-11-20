@@ -36,7 +36,9 @@ public class TodoListConfig {
                          .loginPage("/showLoginPage")
                          .loginProcessingUrl("/authenticatedTheUser")
                           .permitAll()
-                    );         
+                    )
+                .logout(logout -> logout.permitAll()
+                );             
      
 
         return http.build();
